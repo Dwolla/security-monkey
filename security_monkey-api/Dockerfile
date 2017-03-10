@@ -16,11 +16,9 @@ RUN apt-get update &&\
     chown www-data /var/log/security_monkey/securitymonkey.log
 
 ADD api-start.sh /usr/local/src/security_monkey/scripts/api-start.sh
-ADD config-deploy.py /usr/local/src/security_monkey/env-config/config-deploy.py
 
 RUN chmod +x /usr/local/src/security_monkey/scripts/api-start.sh
 
 EXPOSE 5000
 
 ENTRYPOINT ["/usr/local/src/security_monkey/scripts/api-start.sh"]
-
