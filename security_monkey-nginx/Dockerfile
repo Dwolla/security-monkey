@@ -30,6 +30,7 @@ EXPOSE 443
 
 ADD securitymonkey.conf /etc/nginx/conf.d/securitymonkey.conf
 COPY nginx.conf /etc/nginx/nginx.conf
-# ADD server.crt docker/nginx/server.key /etc/nginx/ssl/
+ADD start-nginx.sh /usr/local/src/security_monkey/docker/nginx/start-nginx.sh
+RUN chmod +x /usr/local/src/security_monkey/docker/nginx/start-nginx.sh
 
 ENTRYPOINT ["/usr/local/src/security_monkey/docker/nginx/start-nginx.sh"]

@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+openssl req -nodes \
+  -x509 \
+  -newkey rsa:4096 \
+  -keyout /etc/nginx/ssl/server.key \
+  -out /etc/nginx/ssl/server.crt \
+  -subj "/C=US/ST=Iowa/L=Des Moines/O=Dwolla/CN=localhost/emailAddress=dev+securitymonkey@dwolla.com" \
+  -days 365
+sudo cp /etc/nginx/ssl/server.crt /etc/ssl/certs
+sudo cp /etc/nginx/ssl/server.key /etc/ssl/private
+
 SECURITY_MONKEY_SSL_CERT=${SECURITY_MONKEY_SSL_CERT:-/etc/nginx/ssl/server.crt}
 SECURITY_MONKEY_SSL_KEY=${SECURITY_MONKEY_SSL_KEY:-/etc/nginx/ssl/server.key}
 
