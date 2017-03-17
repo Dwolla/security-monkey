@@ -21,4 +21,5 @@ if [ ! -f "$SECURITY_MONKEY_SSL_CERT" ] || [ ! -f "$SECURITY_MONKEY_SSL_KEY" ]; 
     echo "$(date) Warn: Disabled ssl in securitymonkey.conf"
 fi
 
+echo "The nginx service for security monkey is now starting..."
 exec nginx
