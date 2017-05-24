@@ -1,4 +1,4 @@
-FROM dwolla/security-monkey-base
+FROM dwolla/security-monkey-base:0.8.0
 MAINTAINER dev@dwolla.com
 
 ADD api-init.sh /usr/local/src/security_monkey/scripts/api-init.sh
