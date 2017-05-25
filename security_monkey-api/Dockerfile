@@ -1,4 +1,4 @@
-FROM dwolla/security-monkey-base:0.9.1
+FROM dwolla/security-monkey-base:0.9.2
 
 MAINTAINER dev@dwolla.com
 RUN mkdir /var/log/security_monkey &&\

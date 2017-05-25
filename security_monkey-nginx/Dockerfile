@@ -1,7 +1,7 @@
 FROM nginx:1.13.0
 MAINTAINER dev@dwolla.com
 
-ENV SECURITY_MONKEY_VERSION=v0.9.1
+ENV SECURITY_MONKEY_VERSION=v0.9.2
 RUN apt-get update &&\
   apt-get install -y curl git sudo apt-transport-https gnupg &&\
   curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - &&\
