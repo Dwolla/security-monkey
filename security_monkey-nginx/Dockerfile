@@ -1,9 +1,9 @@
-FROM nginx:1.11.10
+FROM nginx:1.13.0
 MAINTAINER dev@dwolla.com
 
-ENV SECURITY_MONKEY_VERSION=v0.8.0
+ENV SECURITY_MONKEY_VERSION=v0.9.1
 RUN apt-get update &&\
-  apt-get install -y curl git sudo apt-transport-https &&\
+  apt-get install -y curl git sudo apt-transport-https gnupg &&\
   curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - &&\
   curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list && \
   apt-get update &&\

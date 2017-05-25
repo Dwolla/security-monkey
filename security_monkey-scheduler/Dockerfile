@@ -1,4 +1,5 @@
-FROM dwolla/security-monkey-base:0.8.0
+FROM dwolla/security-monkey-base:0.9.1
+
 MAINTAINER dev@dwolla.com
 
 ADD scheduler-start.sh /usr/local/src/security_monkey/scripts/scheduler-start.sh
