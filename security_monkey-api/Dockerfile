@@ -1,4 +1,5 @@
 FROM dwolla/security-monkey-base:0.9.1
+
 MAINTAINER dev@dwolla.com
 RUN mkdir /var/log/security_monkey &&\
     chown www-data /var/log/security_monkey &&\
